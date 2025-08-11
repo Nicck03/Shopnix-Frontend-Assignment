@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloudnix Onboarding</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container-fluid p-4 p-md-5">
+        <div class="onboarding-card mx-auto bg-white p-4 p-md-5 rounded-4 shadow-lg">
+
+            <!-- Step 1: Apply a theme -->
+            <div id="step1" class="step active">
+                <h2 class="mb-4 text-center text-md-start">Apply a theme</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-4">
+                        <div class="theme-card rounded-3 p-3 p-lg-4 shadow-sm border border-2 selected" data-theme="bags">
+                            <div class="theme-preview bags-theme-preview mb-3 rounded"></div>
+                            <h5 class="fw-bold">Bags theme <span class="text-secondary">(recommended)</span></h5>
+                            <button class="btn btn-primary apply-btn">Apply</button>
+                            <span class="selected-icon"><i class="bi bi-check-circle-fill"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="theme-card rounded-3 p-3 p-lg-4 shadow-sm border border-2" data-theme="flex">
+                            <div class="theme-preview flex-theme-preview mb-3 rounded"></div>
+                            <h5 class="fw-bold">Flex theme</h5>
+                            <button class="btn btn-outline-primary apply-btn">Apply</button>
+                            <span class="selected-icon"><i class="bi bi-check-circle-fill"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="theme-card rounded-3 p-3 p-lg-4 shadow-sm border border-2" data-theme="chic">
+                            <div class="theme-preview chic-theme-preview mb-3 rounded"></div>
+                            <h5 class="fw-bold">Chic theme</h5>
+                            <button class="btn btn-outline-primary apply-btn">Apply</button>
+                            <span class="selected-icon"><i class="bi bi-check-circle-fill"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end mt-5">
+                    <button id="next1" class="btn btn-primary btn-lg px-4">Next</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Add product type, category & sub-category -->
+             
+            <div id="step2" class="step">
+                <div class="row align-items-start">
+                    <div class="col-12 col-md-6 scroll-container">
+                        <h2 class="mb-4">Lets add a type, Category and Sub-category</h2>
+                        <div class="mb-3">
+                            <label for="product-type" class="form-label">Add a product type</label>
+                            <input type="text" class="form-control rounded-2" id="product-type" placeholder="eg - books">
+                        </div>
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Add a category <span class="text-secondary">(optional)</span></label>
+                            <input type="text" class="form-control rounded-2" id="category" placeholder="eg - Academic book">
+                        </div>
+                        <div class="mb-3">
+                            <label for="sub-category" class="form-label">Add a sub-category <span class="text-secondary">(optional)</span></label>
+                            <input type="text" class="form-control rounded-2" id="sub-category" placeholder="eg - medical book">
+                        </div>
+                        <div class="d-flex justify-content-start mt-4 pt-4">
+                            <button id="back2" class="btn btn-secondary btn-lg px-4 me-3">Back</button>
+                            <button id="next2" class="btn btn-primary btn-lg px-4">Next</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-5 mt-md-0 d-flex justify-content-center align-items-center">
+                        <div class="flowchart p-4 rounded-3 text-white d-none d-md-block">
+                            <div class="flow-item bg-info-subtle text-primary rounded-3 p-3 mb-3">Product type</div>
+                            <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+                            <div class="flow-item bg-warning-subtle text-warning rounded-3 p-3 mb-3">Category</div>
+                            <div class="flow-arrow"><i class="bi bi-arrow-down"></i></div>
+                            <div class="flow-item bg-warning-subtle text-warning rounded-3 p-3 mb-3">Sub-Category</div>
+                            <div class="flow-arrow horizontal-arrow"><i class="bi bi-arrow-down"></i></div>
+                            <div class="flow-item bg-purple-subtle text-purple rounded-3 p-3 ms-md-4">Product</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Add first product (Basic Details & Pricing Details) -->
+
+            <div id="step3" class="step">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="scroll-container">
+                            <h2 class="mb-4">Lets add your first product</h2>
+                            
+                            <!-- Basic Details -->
+
+                            <div class="mb-5">
+                                <h4 class="mb-3">Basic Details</h4>
+                                <div class="mb-3">
+                                    <label for="product-name" class="form-label">Product name</label>
+                                    <input type="text" class="form-control rounded-2" id="product-name" placeholder="eg - anatomy book">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="product-description" class="form-label">Product Description</label>
+                                    <textarea class="form-control rounded-2" id="product-description" rows="3" placeholder="Input text"></textarea>
+                                    <div class="d-flex justify-content-start mt-2 text-secondary small">
+                                        <div class="formatting-icon me-2">A</div><div class="formatting-icon me-2">B</div><div class="formatting-icon me-2">C</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="add-images" class="form-label">Add Image(s)</label>
+                                    <div class="image-upload-box d-flex justify-content-center align-items-center rounded-2">
+                                        <div class="text-center">
+                                            <i class="bi bi-images"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="has-sku">
+                                    <label class="form-check-label" for="has-sku">
+                                        this product has an SKU code
+                                    </label>
+                                </div>
+                                <div class="mb-3 mt-2 d-none" id="sku-input-container">
+                                    <input type="text" class="form-control rounded-2" id="sku-code" placeholder="eg - PROD0001">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="has-hsn-sac">
+                                    <label class="form-check-label" for="has-hsn-sac">
+                                        this product has an HSN/SAC code
+                                    </label>
+                                </div>
+                            </div>
+    
+                            <!-- Pricing Details -->
+
+                            <div class="mb-5">
+                                <h4 class="mb-3">Pricing Details</h4>
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <label for="net-price" class="form-label">Net price</label>
+                                        <input type="number" class="form-control rounded-2" id="net-price" placeholder="eg - 80">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="list-price" class="form-label">List price</label>
+                                        <input type="number" class="form-control rounded-2" id="list-price" placeholder="eg - 100">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="discount-percentage" class="form-label">Discount percentage</label>
+                                        <input type="number" class="form-control rounded-2" id="discount-percentage" placeholder="eg - 40">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="gst-rate" class="form-label">GST rate</label>
+                                        <input type="number" class="form-control rounded-2" id="gst-rate" placeholder="eg - 20">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="shipping-charges" class="form-label">Shipping charges (if any)</label>
+                                        <input type="number" class="form-control rounded-2" id="shipping-charges" placeholder="eg - 40">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="stock-level" class="form-label">Stock level</label>
+                                        <input type="number" class="form-control rounded-2" id="stock-level" placeholder="eg - 110">
+                                    </div>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="gst-inclusive">
+                                    <label class="form-check-label" for="gst-inclusive">
+                                        price inclusive of GST
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 d-none d-lg-block">
+
+                        
+                    <!-- Product Preview Card -->
+
+                        <div class="product-preview-card p-4 rounded-3 shadow-sm border position-sticky">
+                            <div class="preview-image-box product-preview-bg-image mb-3 rounded-2"></div>
+                            <div class="preview-content p-3 rounded-2">
+                                <h4 id="preview-title" class="fw-bold mb-2">Product title</h4>
+                                <p id="preview-description" class="text-secondary small mb-3">
+                                    Esse minim eiusmod amet et incididunt magna consectetur laborum. Ipsum et cillum do exercitation nostrud nostrud ex. Consectetur Lorem nostrud sint adipisicing amet ipsum cupidatat Lorem adipisicing veniam officia duis excepteur Lorem labore. Non eu non.
+                                </p>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="mb-0 fw-bold fs-5">Rs <span id="preview-price-net">90</span></p>
+                                    <p class="mb-0 text-decoration-line-through text-secondary small">Rs <span id="preview-price-list">100</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-end justify-content-lg-end mt-4">
+                    <button id="back3" class="btn btn-secondary btn-lg px-4 me-3">Back</button>
+                    <button id="next3" class="btn btn-primary btn-lg px-4">Submit</button>
+                </div>
+            </div>
+
+            <!-- Message box for alerts -->
+
+            <div id="message-box" class="message-box rounded-3 p-3 shadow-sm" style="display: none;">
+                <p id="message-text" class="mb-0"></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
